@@ -7,8 +7,13 @@
 # SOURCE:         https://github.com/alexzeitgeist/docker-calibre
 
 # Pull base image.
-FROM debian:jessie
+FROM debian:testing
 MAINTAINER Alexander Turcic "alex@zeitgeist.se"
+
+RUN \
+  apt-get update && \
+  DEBIAN_FRONTEND=noninteractive apt-get dist-upgrade -y && \
+  rm -rf /var/lib/apt/lists/*
 
 # Install dependencies.
 RUN \

@@ -1,14 +1,16 @@
 # vim:set ft=dockerfile:
 
 # VERSION 1.0
-# AUTHOR:         Alexander Turcic <alex@zeitgeist.se>
+# AUTHORS:        Alexander Turcic <alex@zeitgeist.se>
+#                 André-Patrick Bubel <code@andre-bubel.de>
 # DESCRIPTION:    Latest version of calibre (with GUI) in a Docker container
-# TO_BUILD:       docker build --rm -t zeitgeist/docker-calibre .
-# SOURCE:         https://github.com/alexzeitgeist/docker-calibre
+# TO_BUILD:       docker build --rm -t moredread/docker-calibre .
+# SOURCE:         https://github.com/moredread/docker-calibre
+# FORKED FROM:    https://github.com/alexzeitgeist/docker-calibre
 
 # Pull base image.
 FROM debian:testing
-MAINTAINER Alexander Turcic "alex@zeitgeist.se"
+MAINTAINER André-Patrick Bubel "code@andre-bubel.de"
 
 RUN \
   apt-get update && \
